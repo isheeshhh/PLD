@@ -1,5 +1,12 @@
+#Name: Irish B. De Guzman
+#Date: November 13, 2025
+#Title: Exercise 6 - Asterisk
+
+#inputs the number of columns
 loopRange = int(input("Enter number: "))
 while True:
+    
+    #inputs the choice you want to print
     choice = input("Enter a letter: ").capitalize()
 
     if choice == "A":
@@ -22,3 +29,6 @@ while True:
         break
     else: 
         print("Invalid input!")
+
+
+

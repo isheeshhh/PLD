@@ -1,6 +1,6 @@
 #Name: Irish B De Guzman
 #Date: November 4, 2025
-#Title: Grades Computation
+#Title: Exercise 4 - Grades Computation
 print("Welcome to Grades Computation\n\nClass Standing (Lecture) 70%\n")
 
 # inputs the grades for class standing (lecture)

@@ -1,3 +1,7 @@
+#Name: Irish B. De Guzman
+#Date: November 13, 2025
+#Title: Exercise 5 - Grades Computation
+
 print("Grade Computation")
 print("\nLecture\n")
 
@@ -477,7 +481,7 @@ while True:
                     else:
                         print("Quiz number is out of range. Please enter a valid Quiz number.")
                         continue
-                
+
                 #inputs the new value
                 while True:
                     lecQuizPerfectScoreNewValueInput = input("Enter the new perfect score value: ")
