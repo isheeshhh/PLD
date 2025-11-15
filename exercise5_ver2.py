@@ -15,7 +15,7 @@ lecAss = 0
 #loop that gets the scores
 while len(lecAssList) < (lecAssNum):
     lecAss += 1
-    lecAssInput = int(input(f"Enter your grade in Assignment {lecAss}: "))
+    lecAssInput = float(input(f"Enter your grade in Assignment {lecAss}: "))
     lecAssList.append(lecAssInput)
 
 #computes the total of scores
@@ -37,7 +37,7 @@ lecProj = 0
 #loop that gets the scores
 while len(lecProjList) < (lecProjNum):
     lecProj += 1
-    lecProjInput = int(input(f"Enter your grade in Project {lecProj}: "))
+    lecProjInput = float(input(f"Enter your grade in Project {lecProj}: "))
     lecProjList.append(lecProjInput)
 
 #computes the total of scores
@@ -59,7 +59,7 @@ lecRecit = 0
 #loop that gets the scores
 while len(lecRecitList) < (lecRecitNum):
     lecRecit += 1
-    lecRecitInput = int(input(f"Enter your grade in Recitation {lecRecit}: "))
+    lecRecitInput = float(input(f"Enter your grade in Recitation {lecRecit}: "))
     lecRecitList.append(lecRecitInput)
 
 #computes the total of scores
@@ -81,7 +81,7 @@ lecQuiz = 0
 #loop that gets the scores
 while len(lecQuizList) < (lecQuizNum):
     lecQuiz += 1
-    lecQuizInput = int(input(f"Enter your grade in Quiz {lecQuiz}: "))
+    lecQuizInput = float(input(f"Enter your grade in Quiz {lecQuiz}: "))
     lecQuizList.append(lecQuizInput)
 
 #computes the total of scores
@@ -103,7 +103,7 @@ lecExam = 0
 #loop that gets the scores
 while len(lecExamList) < (lecExamNum):
     lecExam += 1
-    lecExamInput = int(input(f"Enter your grade in Examination {lecExam}: "))
+    lecExamInput = float(input(f"Enter your grade in Examination {lecExam}: "))
     lecExamList.append(lecExamInput)
 
 #computes the total of scores
@@ -127,7 +127,7 @@ labAss = 0
 #loop that gets the scores
 while len(labAssList) < (labAssNum):
     labAss += 1
-    labAssInput = int(input(f"Enter your grade in Assignment {labAss}: "))
+    labAssInput = float(input(f"Enter your grade in Assignment {labAss}: "))
     labAssList.append(labAssInput)
 
 #computes the total of scores
@@ -149,7 +149,7 @@ labProj = 0
 #loop that gets the scores
 while len(labProjList) < (labProjNum):
     labProj += 1
-    labProjInput = int(input(f"Enter your grade in Project {labProj}: "))
+    labProjInput = float(input(f"Enter your grade in Project {labProj}: "))
     labProjList.append(labProjInput)
 
 #computes the total of scores
@@ -171,7 +171,7 @@ labRecit = 0
 #loop that gets the scores
 while len(labRecitList) < (labRecitNum):
     labRecit += 1
-    labRecitInput = int(input(f"Enter your grade in Recitation {labRecit}: "))
+    labRecitInput = float(input(f"Enter your grade in Recitation {labRecit}: "))
     labRecitList.append(labRecitInput)
 
 #computes the total of scores
@@ -193,7 +193,7 @@ labQuiz = 0
 #loop that gets the scores
 while len(labQuizList) < (labQuizNum):
     labQuiz += 1
-    labQuizInput = int(input(f"Enter your grade in Quiz {labQuiz}: "))
+    labQuizInput = float(input(f"Enter your grade in Quiz {labQuiz}: "))
     labQuizList.append(labQuizInput)
 
 #computes the total of scores
@@ -215,7 +215,7 @@ labExam = 0
 #loop that gets the scores
 while len(labExamList) < (labExamNum):
     labExam += 1
-    labExamInput = int(input(f"Enter your grade in Examination {labExam}: "))
+    labExamInput = float(input(f"Enter your grade in Examination {labExam}: "))
     labExamList.append(labExamInput)
 
 #computes the total of scores
@@ -241,8 +241,9 @@ roundedFinalGrade = round(finalGrade, 2)
 
 #rounds up or rounds down the final grade
 integer = int(roundedFinalGrade)
+decimal = roundedFinalGrade - integer
 
-if roundedFinalGrade > integer:
+if decimal >= 0.45:
     roundFinalGrade = integer + 1
 else:
     roundFinalGrade = integer
@@ -310,7 +311,7 @@ elif roundFinalGrade >= 91 and roundedFinalGrade <= 93:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 1.50. You Passed!")
 elif roundFinalGrade >= 88 and roundedFinalGrade <= 90:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 1.75. You Passed!")
-elif roundedFinalGrade >= 85 and roundedFinalGrade <= 87:
+elif roundFinalGrade >= 85 and roundedFinalGrade <= 87:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 2.00. You Passed!")
 elif roundFinalGrade >= 82 and roundedFinalGrade <= 84:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 2.25. You Passed!")
