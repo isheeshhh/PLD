@@ -1,53 +1,77 @@
 #Name: Irish B. De Guzman
 #Date: November 13, 2025
 #Title: Exercise 6 - Asterisk
-
-def asterisk():
-
-    while True:
-        #inputs the number of columns
-        loopRange = int(input("Enter number: "))
-        #inputs the choice you want to print
-        choice = input("Enter a letter: ").capitalize()
-
-        if choice == "A":
-            for i in range(loopRange):
-                print("*" * i)
-            for i in range(loopRange, 0, -1):
-                print("*" * i)
-            break 
-        elif choice == "B":
-            for i in range(loopRange):
-                print(" " * ((loopRange - 1) - i) + "*" * i)
-            for i in range((loopRange - 2), -1, -1):
-                print(" " * ((loopRange - 1) - i) + "*" * i)
-            break
-        elif choice == "C":
-            for i in range(loopRange):
-                print(("*" * i) + (" " * ((loopRange - 1) - i)) + (" " * ((loopRange - 1) - i)) + ("*" * i))
-            for i in range((loopRange - 2), -1, -1):
-                print(("*" * i) + (" " * ((loopRange - 1) - i)) + (" " * ((loopRange - 1) - i)) + ("*" * i))
-            break
-        else: 
-            print("Invalid input!")
-
-asterisk()
 while True:
-    enterAgain = input("Do you want to enter again: ").upper()
-    if enterAgain == "YES":
-        asterisk()
-    elif enterAgain == "NO":
-        print("Done")
-        break
-    else:
-        print("Invalid input.")
-        continue
+    print ("Select Pattern")
+    print ("A, B, C")
+    choice = input("Enter your selected pattern: ")
 
-
-
+# pattern A
+    if choice == "A" or choice == "a":
+        print ("\nA")
+        a = 5
+        for i in range (a):
+            for A in range (i + 1):
+                print ("*", end =" ")
+            print ()
+        a = 4
+        for i in range (a):
+            for A in range (i, a):
+                print ("*", end = " ")
+            print()
     
-    
-    
+#pattern B
+    elif choice == "B" or choice == "b":
+        print ("\nB")
+        b = 4
+        for i in range (b):
+            for B in range (i, b):
+                print (" ", end = " ")
+            for B in range (i+1):
+                print ("*", end = " ")
+            print ()
+        b = 5
+        for i in range (b):
+            for B in range (i):
+                print(" ", end = " ")
+            for B in range (i, b):
+                print ("*", end =" ")
+            print ()
 
+#pattern c
+
+    elif choice == "C" or choice == "c":
+        print("\nC")
+        for x in range(1, 10):
+            if x == 5:
+                asterisk = x - 1
+                space = 2 * (5 - x) - 1
+                print("*", end=" ")
+            elif x < 5:
+                asterisk = x
+                space = 2 * (5 - asterisk) - 1
+            else:
+                asterisk = 10 - x
+                space = 2 * (5 - asterisk) - 1
+            for i in range(asterisk):
+                print("*", end=" ")
+            for i in range(space):
+                print(" ", end=" ")
+            for i in range(asterisk):
+                print("*", end=" ")
+            print()
+            
+    while True:
+        again = input("\nDo you want to select another pattern? (Y/N): ").strip().upper()
+
+        if again == "Y":
+            # user wants to choose another pattern — go back to main input
+            break
+        elif again == "N":
+            print("Done.")
+            exit()  # end the whole program
+        else:
+            # invalid response for Y/N
+            print("Invalid input! Please enter Y or N only.")
 
 
