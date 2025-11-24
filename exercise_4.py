@@ -77,7 +77,15 @@ finalGrade = (finalLecture * 0.70) + (finalLab * 0.30)
 
 #rounds off the final grade to the nearest hundreths
 roundedFinalGrade = round(finalGrade, 2)
-roundFinalGrade = (roundedFinalGrade + 0.5)
+
+#rounds up or rounds down the final grade
+integer_part = int(roundedFinalGrade)
+decimal_part = round(roundedFinalGrade - integer_part, 2)
+
+if decimal_part <= 0.45:
+    roundFinalGrade = integer_part + 1
+else:
+    roundFinalGrade = integer_part
 
 print("Final lecture: ", finalLecture)
 print("Final lab: ", finalLab)

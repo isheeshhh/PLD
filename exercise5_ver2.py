@@ -416,12 +416,13 @@ finalGrade = (finalLec * 0.70) + (finalLab * 0.30)
 roundedFinalGrade = round(finalGrade, 2)
 
 #rounds up or rounds down the final grade
-integer = int(roundedFinalGrade)
+integer_part = int(roundedFinalGrade)
+decimal_part = round(roundedFinalGrade - integer_part, 2)
 
-if roundedFinalGrade > integer:
-    roundFinalGrade = integer + 1
+if decimal_part <= 0.45:
+    roundFinalGrade = integer_part + 1
 else:
-    roundFinalGrade = integer
+    roundFinalGrade = integer_part
 
 print("\nAssignment (Lecture)")
 for index, items in enumerate(lecAssList):

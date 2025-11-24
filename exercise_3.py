@@ -4,28 +4,28 @@
 print("Welcome to Grades Computation\n\nClass Standing (Lecture) 70%\n")
 
 # inputs the grades for class standing (lecture)
-lecAss = int(input("Enter your assignment grade (15%): "))
-lecProj = int(input("Enter your project grade (20%): "))
-lecRecit = int(input("Enter your recitation grade (10%): "))
-lecQuiz = int(input("Enter your quiz grade (25%): "))
+lecAss = float(input("Enter your assignment grade (15%): "))
+lecProj = float(input("Enter your project grade (20%): "))
+lecRecit = float(input("Enter your recitation grade (10%): "))
+lecQuiz = float(input("Enter your quiz grade (25%): "))
 
 print("\nExamination (Lecture) 30%\n")
 
 #inputs the grade for examination (lecture)
-lecExam = int(input("Enter your  examination grade (30%): "))
+lecExam = float(input("Enter your  examination grade (30%): "))
 
 print("\nClass Standing (Laboratory) 70%\n")
 
 #inputs the grade for class standing (lab)
-labAss = int(input("Enter your assignment grade (15%): "))
-labProj = int(input("Enter your project grade (20%): "))
-labRecit = int(input("Enter your recitation grade (10%): "))
-labQuiz = int(input("Enter your quiz grade (25%): "))
+labAss = float(input("Enter your assignment grade (15%): "))
+labProj = float(input("Enter your project grade (20%): "))
+labRecit = float(input("Enter your recitation grade (10%): "))
+labQuiz = float(input("Enter your quiz grade (25%): "))
 
 print("\nExamination (30%)\n")
 
 #inputs the grade for examination (lab)
-labExam = int(input("Enter your examination grade (30%): "))
+labExam = float(input("Enter your examination grade (30%): "))
 
 print("Final Grade Lecture (70%) + Laboratory")
 
@@ -78,11 +78,20 @@ finalGrade = (finalLecture * 0.70) + (finalLab * 0.30)
 #rounds off the final grade to the nearest hundreths
 roundedFinalGrade = round(finalGrade, 2)
 
+#rounds up or rounds down the final grade
+integer_part = int(roundedFinalGrade)
+decimal_part = round(roundedFinalGrade - integer_part, 2)
+
+if decimal_part <= 0.45:
+    roundFinalGrade = integer_part + 1
+else:
+    roundFinalGrade = integer_part
+
 print("Final lecture: ", finalLecture)
 print("Final lab: ", finalLab)
 
 #outputs the final grade and remarks
-if roundedFinalGrade >= 75:
-    print("Your final grade is ", roundedFinalGrade, ".", " You passed!")
+if roundFinalGrade >= 75:
+    print(f"Your final grade is {roundedFinalGrade}. You Passed!")
 else:
-    print("Your final grade is ", roundedFinalGrade, ".", " You failed!")
+    print(f"Your final grade is {roundedFinalGrade}. You Failed!")
