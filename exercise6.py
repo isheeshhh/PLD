@@ -2,10 +2,10 @@
 #Date: November 13, 2025
 #Title: Exercise 6 - Asterisk
 
-#inputs the number of columns
 def asterisk():
 
     while True:
+        #inputs the number of columns
         loopRange = int(input("Enter number: "))
         #inputs the choice you want to print
         choice = input("Enter a letter: ").capitalize()
