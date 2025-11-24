@@ -82,11 +82,12 @@ roundedFinalGrade = round(finalGrade, 2)
 integer_part = int(roundedFinalGrade)
 decimal_part = round(roundedFinalGrade - integer_part, 2)
 
-if decimal_part <= 0.45:
+if decimal_part >= 0.45:
     roundFinalGrade = integer_part + 1
 else:
     roundFinalGrade = integer_part
 
+print(roundFinalGrade)
 print("Final lecture: ", finalLecture)
 print("Final lab: ", finalLab)
 
