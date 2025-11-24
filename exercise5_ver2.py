@@ -1,228 +1,404 @@
-#Name: Irish B. De Guzman
-#Date: November 15, 2025
-#Title: Exercise 5 - Grades Computation
-
 print("Grades Computation")
 print("\nLecture\n")
 
-print("Assignment\n")
+print("\nAssignment\n")
 
-#inputs the number of Assignment (Lecture)
-lecAssNum = int(input("Enter the number of Assignments: "))
+#inputs the number of Assignment(Lecture)
 lecAssList = []
 lecAss = 0
 
+while True:
+    lecAssNum = input("Enter the number of Assignments: ")
+    try:
+        lecAssNumInput = int(lecAssNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(lecAssList) < (lecAssNum):
+while len(lecAssList) < (lecAssNumInput):
     lecAss += 1
-    lecAssInput = float(input(f"Enter your grade in Assignment {lecAss}: "))
-    lecAssList.append(lecAssInput)
+    lecAssList.append(None)
+    lecAssInput = input(f"Enter your grade in Assignment{lecAss}: ")
+    
+    try:
+        lecAssScore = int(lecAssInput)
+        lecAssList[-1] = lecAssScore
+
+    except:
+        print("Invalid input.")
+        lecAssList.pop()
+        lecAss -= 1
+        continue
 
 #computes the total of scores
 lecAssTotal = sum(lecAssList)
 
 #computes the percentage score
-lecAssPs = (lecAssTotal / (lecAssNum * 100)) * 100
+lecAssPs = (lecAssTotal / (lecAssNumInput * 100)) * 100
 
 #computes the weighted score
 lecAssWs = lecAssPs * 0.15
 
 print("\nProject\n")
 
-#inputs the number of Project (Lecture)
-lecProjNum = int(input("Enter the number of Projects: "))
+#inputs the number of Project(Lecture)
 lecProjList = []
 lecProj = 0
 
+while True:
+    lecProjNum = input("Enter the number of Projects: ")
+    try:
+        lecProjNumInput = int(lecProjNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(lecProjList) < (lecProjNum):
+while len(lecProjList) < (lecProjNumInput):
     lecProj += 1
-    lecProjInput = float(input(f"Enter your grade in Project {lecProj}: "))
-    lecProjList.append(lecProjInput)
+    lecProjList.append(None)
+    lecProjInput = input(f"Enter your grade in Project{lecProj}: ")
+    
+    try:
+        lecProjScore = int(lecProjInput)
+        lecProjList[-1] = lecProjScore
+
+    except:
+        print("Invalid input.")
+        lecProjList.pop()
+        lecProj -= 1
+        continue
 
 #computes the total of scores
 lecProjTotal = sum(lecProjList)
 
 #computes the percentage score
-lecProjPs = (lecProjTotal / (lecProjNum * 100)) * 100
+lecProjPs = (lecProjTotal / (lecProjNumInput * 100)) * 100
 
 #computes the weighted score
 lecProjWs = lecProjPs * 0.20
 
 print("\nRecitation\n")
 
-#inputs the number of Recitation (Lecture)
-lecRecitNum = int(input("Enter the number of Recitations: "))
+#inputs the number of Recitation(Lecture)
 lecRecitList = []
 lecRecit = 0
 
+while True:
+    lecRecitNum = input("Enter the number of Recitations: ")
+    try:
+        lecRecitNumInput = int(lecRecitNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(lecRecitList) < (lecRecitNum):
+while len(lecRecitList) < (lecRecitNumInput):
     lecRecit += 1
-    lecRecitInput = float(input(f"Enter your grade in Recitation {lecRecit}: "))
-    lecRecitList.append(lecRecitInput)
+    lecRecitList.append(None)
+    lecRecitInput = input(f"Enter your grade in Recitation{lecRecit}: ")
+    
+    try:
+        lecRecitScore = int(lecRecitInput)
+        lecRecitList[-1] = lecRecitScore
+
+    except:
+        print("Invalid input.")
+        lecRecitList.pop()
+        lecRecit -= 1
+        continue
 
 #computes the total of scores
 lecRecitTotal = sum(lecRecitList)
 
 #computes the percentage score
-lecRecitPs = (lecRecitTotal / (lecRecitNum * 100)) * 100
+lecRecitPs = (lecRecitTotal / (lecRecitNumInput * 100)) * 100
 
 #computes the weighted score
 lecRecitWs = lecRecitPs * 0.10
 
 print("\nQuiz\n")
 
-#inputs the number of Quiz (Lecture)
-lecQuizNum = int(input("Enter the number of Quizzes: "))
+#inputs the number of Quiz(Lecture)
 lecQuizList = []
 lecQuiz = 0
 
+while True:
+    lecQuizNum = input("Enter the number of Quizs: ")
+    try:
+        lecQuizNumInput = int(lecQuizNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(lecQuizList) < (lecQuizNum):
+while len(lecQuizList) < (lecQuizNumInput):
     lecQuiz += 1
-    lecQuizInput = float(input(f"Enter your grade in Quiz {lecQuiz}: "))
-    lecQuizList.append(lecQuizInput)
+    lecQuizList.append(None)
+    lecQuizInput = input(f"Enter your grade in Quiz{lecQuiz}: ")
+    
+    try:
+        lecQuizScore = int(lecQuizInput)
+        lecQuizList[-1] = lecQuizScore
+
+    except:
+        print("Invalid input.")
+        lecQuizList.pop()
+        lecQuiz -= 1
+        continue
 
 #computes the total of scores
 lecQuizTotal = sum(lecQuizList)
 
 #computes the percentage score
-lecQuizPs = (lecQuizTotal / (lecQuizNum * 100)) * 100
+lecQuizPs = (lecQuizTotal / (lecQuizNumInput * 100)) * 100
 
 #computes the weighted score
 lecQuizWs = lecQuizPs * 0.25
 
 print("\nExamination\n")
 
-#inputs the number of Examination (Lecture)
-lecExamNum = int(input("Enter the number of Examinations: "))
+#inputs the number of Examination(Lecture)
 lecExamList = []
 lecExam = 0
 
+while True:
+    lecExamNum = input("Enter the number of Examinations: ")
+    try:
+        lecExamNumInput = int(lecExamNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(lecExamList) < (lecExamNum):
+while len(lecExamList) < (lecExamNumInput):
     lecExam += 1
-    lecExamInput = float(input(f"Enter your grade in Examination {lecExam}: "))
-    lecExamList.append(lecExamInput)
+    lecExamList.append(None)
+    lecExamInput = input(f"Enter your grade in Examination{lecExam}: ")
+    
+    try:
+        lecExamScore = int(lecExamInput)
+        lecExamList[-1] = lecExamScore
+
+    except:
+        print("Invalid input.")
+        lecExamList.pop()
+        lecExam -= 1
+        continue
 
 #computes the total of scores
 lecExamTotal = sum(lecExamList)
 
 #computes the percentage score
-lecExamPs = (lecExamTotal / (lecExamNum * 100)) * 100
+lecExamPs = (lecExamTotal / (lecExamNumInput * 100)) * 100
 
 #computes the weighted score
 lecExamWs = lecExamPs * 0.30
 
 print("\nLaboratory\n")
 
-print("Assignment\n")
+print("\nAssignment\n")
 
-#inputs the number of Assignment (Laboratory)
-labAssNum = int(input("Enter the number of Assignments: "))
+#inputs the number of Assignment(Laboratory)
 labAssList = []
 labAss = 0
 
+while True:
+    labAssNum = input("Enter the number of Assignments: ")
+    try:
+        labAssNumInput = int(labAssNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(labAssList) < (labAssNum):
+while len(labAssList) < (labAssNumInput):
     labAss += 1
-    labAssInput = float(input(f"Enter your grade in Assignment {labAss}: "))
-    labAssList.append(labAssInput)
+    labAssList.append(None)
+    labAssInput = input(f"Enter your grade in Assignment{labAss}: ")
+    
+    try:
+        labAssScore = int(labAssInput)
+        labAssList[-1] = labAssScore
+
+    except:
+        print("Invalid input.")
+        labAssList.pop()
+        labAss -= 1
+        continue
 
 #computes the total of scores
 labAssTotal = sum(labAssList)
 
 #computes the percentage score
-labAssPs = (labAssTotal / (labAssNum * 100)) * 100
+labAssPs = (labAssTotal / (labAssNumInput * 100)) * 100
 
 #computes the weighted score
 labAssWs = labAssPs * 0.15
 
 print("\nProject\n")
 
-#inputs the number of Project (Laboratory)
-labProjNum = int(input("Enter the number of Projects: "))
+#inputs the number of Project(Laboratory)
 labProjList = []
 labProj = 0
 
+while True:
+    labProjNum = input("Enter the number of Projects: ")
+    try:
+        labProjNumInput = int(labProjNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(labProjList) < (labProjNum):
+while len(labProjList) < (labProjNumInput):
     labProj += 1
-    labProjInput = float(input(f"Enter your grade in Project {labProj}: "))
-    labProjList.append(labProjInput)
+    labProjList.append(None)
+    labProjInput = input(f"Enter your grade in Project{labProj}: ")
+    
+    try:
+        labProjScore = int(labProjInput)
+        labProjList[-1] = labProjScore
+
+    except:
+        print("Invalid input.")
+        labProjList.pop()
+        labProj -= 1
+        continue
 
 #computes the total of scores
 labProjTotal = sum(labProjList)
 
 #computes the percentage score
-labProjPs = (labProjTotal / (labProjNum * 100)) * 100
+labProjPs = (labProjTotal / (labProjNumInput * 100)) * 100
 
 #computes the weighted score
 labProjWs = labProjPs * 0.20
 
 print("\nRecitation\n")
 
-#inputs the number of Recitation (Laboratory)
-labRecitNum = int(input("Enter the number of Recitations: "))
+#inputs the number of Recitation(Laboratory)
 labRecitList = []
 labRecit = 0
 
+while True:
+    labRecitNum = input("Enter the number of Recitations: ")
+    try:
+        labRecitNumInput = int(labRecitNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(labRecitList) < (labRecitNum):
+while len(labRecitList) < (labRecitNumInput):
     labRecit += 1
-    labRecitInput = float(input(f"Enter your grade in Recitation {labRecit}: "))
-    labRecitList.append(labRecitInput)
+    labRecitList.append(None)
+    labRecitInput = input(f"Enter your grade in Recitation{labRecit}: ")
+    
+    try:
+        labRecitScore = int(labRecitInput)
+        labRecitList[-1] = labRecitScore
+
+    except:
+        print("Invalid input.")
+        labRecitList.pop()
+        labRecit -= 1
+        continue
 
 #computes the total of scores
 labRecitTotal = sum(labRecitList)
 
 #computes the percentage score
-labRecitPs = (labRecitTotal / (labRecitNum * 100)) * 100
+labRecitPs = (labRecitTotal / (labRecitNumInput * 100)) * 100
 
 #computes the weighted score
 labRecitWs = labRecitPs * 0.10
 
 print("\nQuiz\n")
 
-#inputs the number of Quiz (Laboratory)
-labQuizNum = int(input("Enter the number of Quizzes: "))
+#inputs the number of Quiz(Laboratory)
 labQuizList = []
 labQuiz = 0
 
+while True:
+    labQuizNum = input("Enter the number of Quizs: ")
+    try:
+        labQuizNumInput = int(labQuizNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(labQuizList) < (labQuizNum):
+while len(labQuizList) < (labQuizNumInput):
     labQuiz += 1
-    labQuizInput = float(input(f"Enter your grade in Quiz {labQuiz}: "))
-    labQuizList.append(labQuizInput)
+    labQuizList.append(None)
+    labQuizInput = input(f"Enter your grade in Quiz{labQuiz}: ")
+    
+    try:
+        labQuizScore = int(labQuizInput)
+        labQuizList[-1] = labQuizScore
+
+    except:
+        print("Invalid input.")
+        labQuizList.pop()
+        labQuiz -= 1
+        continue
 
 #computes the total of scores
 labQuizTotal = sum(labQuizList)
 
 #computes the percentage score
-labQuizPs = (labQuizTotal / (labQuizNum * 100)) * 100
+labQuizPs = (labQuizTotal / (labQuizNumInput * 100)) * 100
 
 #computes the weighted score
 labQuizWs = labQuizPs * 0.25
 
 print("\nExamination\n")
 
-#inputs the number of Examination (Laboratory)
-labExamNum = int(input("Enter the number of Examinations: "))
+#inputs the number of Examination(Laboratory)
 labExamList = []
 labExam = 0
 
+while True:
+    labExamNum = input("Enter the number of Examinations: ")
+    try:
+        labExamNumInput = int(labExamNum)
+        break
+    except:
+        print("Invlid input.")
+        continue
+
 #loop that gets the scores
-while len(labExamList) < (labExamNum):
+while len(labExamList) < (labExamNumInput):
     labExam += 1
-    labExamInput = float(input(f"Enter your grade in Examination {labExam}: "))
-    labExamList.append(labExamInput)
+    labExamList.append(None)
+    labExamInput = input(f"Enter your grade in Examination{labExam}: ")
+    
+    try:
+        labExamScore = int(labExamInput)
+        labExamList[-1] = labExamScore
+
+    except:
+        print("Invalid input.")
+        labExamList.pop()
+        labExam -= 1
+        continue
 
 #computes the total of scores
 labExamTotal = sum(labExamList)
 
 #computes the percentage score
-labExamPs = (labExamTotal / (labExamNum * 100)) * 100
+labExamPs = (labExamTotal / (labExamNumInput * 100)) * 100
 
 #computes the weighted score
 labExamWs = labExamPs * 0.30
@@ -241,9 +417,8 @@ roundedFinalGrade = round(finalGrade, 2)
 
 #rounds up or rounds down the final grade
 integer = int(roundedFinalGrade)
-decimal = roundedFinalGrade - integer
 
-if decimal >= 0.45:
+if roundedFinalGrade > integer:
     roundFinalGrade = integer + 1
 else:
     roundFinalGrade = integer
@@ -311,7 +486,7 @@ elif roundFinalGrade >= 91 and roundedFinalGrade <= 93:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 1.50. You Passed!")
 elif roundFinalGrade >= 88 and roundedFinalGrade <= 90:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 1.75. You Passed!")
-elif roundFinalGrade >= 85 and roundedFinalGrade <= 87:
+elif roundedFinalGrade >= 85 and roundedFinalGrade <= 87:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 2.00. You Passed!")
 elif roundFinalGrade >= 82 and roundedFinalGrade <= 84:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 2.25. You Passed!")
@@ -323,4 +498,5 @@ elif roundFinalGrade == 75:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 3.00. You Passed!")
 else:
     print("Your final grade is", roundedFinalGrade, "which is equivalent to 5.00. You Failed!")
+
 
