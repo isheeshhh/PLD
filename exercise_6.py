@@ -1,6 +1,7 @@
 #Name: Irish B. De Guzman
 #Date: November 13, 2025
 #Title: Exercise 6 - Asterisk
+
 while True:
     print ("Select Pattern")
     print ("A, B, C")
@@ -65,13 +66,12 @@ while True:
         again = input("\nDo you want to select another pattern? (Y/N): ").strip().upper()
 
         if again == "Y":
-            # user wants to choose another pattern — go back to main input
             break
         elif again == "N":
             print("Done.")
-            exit()  # end the whole program
+            exit() 
         else:
-            # invalid response for Y/N
             print("Invalid input! Please enter Y or N only.")
+            continue
 
 
