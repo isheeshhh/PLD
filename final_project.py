@@ -458,15 +458,14 @@ def exercise_6():
                 print()
                 
         while True:
-            again = input("\nDo you want to select another pattern? (Y/N): ").strip().upper()
+            again = input("\nDo you want to select another pattern?: ").strip().upper()
 
-            if again == "Y":
+            if again == "YES":
                 break
-            elif again == "N":
-                print("Done.")
-                exit()
+            elif again == "NO":
+                return
             else:
-                print("Invalid input! Please enter Y or N only.")
+                print("Invalid input. Please enter 'yes' or 'no'.")
 
 while True:
     choice = input("Enter the number of exercise you want to run: ")
@@ -476,14 +475,14 @@ while True:
             exercise_1()
         elif choice_int == 2:
             exercise_2()
-        elif choice_int == 2:
-            exercise_2()
-        elif choice_int == 2:
-            exercise_2()
-        elif choice_int == 2:
-            exercise_2()
-        elif choice_int == 2:
-            exercise_2()
+        elif choice_int == 3:
+            exercise_3()
+        elif choice_int == 4:
+            exercise_4()
+        elif choice_int == 5:
+            exercise_5()
+        elif choice_int == 6:
+            exercise_6()
         else:
             print("Your input is out of range. Please enter a number from 1-6.")
             continue
