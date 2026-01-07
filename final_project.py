@@ -348,12 +348,13 @@ def exercise_5():
     roundedFinalGrade = round(finalGrade, 2)
 
     #rounds up or rounds down the final grade
-    integer = int(roundedFinalGrade)
+    integer_part = int(roundedFinalGrade)
+    decimal_part = round(roundedFinalGrade - integer_part, 2)
 
-    if roundedFinalGrade > integer:
-        roundFinalGrade = integer + 1
+    if decimal_part >= 0.50:
+        roundFinalGrade = integer_part + 1
     else:
-        roundFinalGrade = integer
+        roundFinalGrade = integer_part
 
     print("\n")
     lecAssPrint = print_grades("Assignement","Lecture", lecAssList)
