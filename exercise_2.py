@@ -1,4 +1,4 @@
- #Name: Irish B. De Guzman
+#Name: Irish B. De Guzman
 #Date: October 25, 2025
 #Title: Exercise 2 - Receipt
 
