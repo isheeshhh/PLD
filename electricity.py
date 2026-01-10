@@ -1,6 +1,6 @@
 #Name: Irish B. De Guzman
 #Date: November 13, 2025
-#Title: Electricity Bill
+#Title: Quiz - Electricity Bill
 
 #inputs the customer type
 customerType = input("Enter your customer type: ").upper()
