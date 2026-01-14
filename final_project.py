@@ -402,10 +402,10 @@ def exercise_6():
     while True:
         print ("Select Pattern")
         print ("A, B, C")
-        choice = input("Enter your selected pattern: ")
+        choice = input("Enter your selected pattern: ").strip().upper()
 
     # pattern A
-        if choice == "A" or choice == "a":
+        if choice == "A":
             print ("\nA")
             a = 5
             for i in range (a):
@@ -419,7 +419,7 @@ def exercise_6():
                 print()
         
     #pattern B
-        elif choice == "B" or choice == "b":
+        elif choice == "B":
             print ("\nB")
             b = 4
             for i in range (b):
@@ -437,7 +437,7 @@ def exercise_6():
                 print ()
 
     #pattern C
-        elif choice == "C" or choice == "c":
+        elif choice == "C":
             print("\nC")
             for x in range(1, 10):
                 if x == 5:
@@ -459,7 +459,7 @@ def exercise_6():
                 print()
                 
         while True:
-            again = input("\nDo you want to select another pattern?: ").strip().upper()
+            again = input("\nDo you want to select another pattern? (yes or no): ").strip().upper()
 
             if again == "YES":
                 break
@@ -492,7 +492,7 @@ while True:
         continue
 
     while True:
-        choice_2 = input("Do you want to run another exercise?: ").strip().upper()
+        choice_2 = input("Do you want to run another exercise? (yes or no): ").strip().upper()
         if choice_2 == "YES":
             break
         elif choice_2 == "NO":
