@@ -1,5 +1,5 @@
 #Name: Irish B. De Guzman
-#Date: January 6, 2026
+#Date: January 14, 2026
 #Title: Final Project - Compilation of Exercises
 
 def exercise_1():
@@ -403,8 +403,8 @@ def exercise_6():
         print ("Select Pattern")
         print ("A, B, C")
         choice = input("Enter your selected pattern: ").strip().upper()
-
-    # pattern A
+        
+        # pattern A
         if choice == "A":
             print ("\nA")
             a = 5
@@ -418,7 +418,7 @@ def exercise_6():
                     print ("*", end = " ")
                 print()
         
-    #pattern B
+        #pattern B
         elif choice == "B":
             print ("\nB")
             b = 4
@@ -436,7 +436,7 @@ def exercise_6():
                     print ("*", end =" ")
                 print ()
 
-    #pattern C
+        #pattern C
         elif choice == "C":
             print("\nC")
             for x in range(1, 10):
@@ -457,7 +457,10 @@ def exercise_6():
                 for i in range(asterisk):
                     print("*", end=" ")
                 print()
-                
+        else:
+            print("Invalid input. Please enter A, B, or C.")
+            continue
+
         while True:
             again = input("\nDo you want to select another pattern? (yes or no): ").strip().upper()
 
@@ -469,7 +472,7 @@ def exercise_6():
                 print("Invalid input. Please enter 'yes' or 'no'.")
 
 while True:
-    choice = input("Enter the number of exercise you want to run: ")
+    choice = input("\nEnter the number of exercise you want to run: ")
     try:
         choice_int = int(choice)
         if choice_int == 1:
@@ -492,7 +495,7 @@ while True:
         continue
 
     while True:
-        choice_2 = input("Do you want to run another exercise? (yes or no): ").strip().upper()
+        choice_2 = input("\nDo you want to run another exercise? (yes or no): ").strip().upper()
         if choice_2 == "YES":
             break
         elif choice_2 == "NO":
